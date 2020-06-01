@@ -1,0 +1,27 @@
+{
+  "hosting": [
+    {
+      "target": "melreact",
+      "public": "build",
+      "rewrites": [
+        {
+          "source": "/handler/checkFlight",
+          "function": "checkFlight"
+        },
+        {
+          "source": "/admin/**",
+          "destination": "/index.html"
+        },
+        {
+          "source": "/auth/**",
+          "destination": "/index.html"
+        }
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ]
+}
